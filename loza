@@ -1,0 +1,24 @@
+#include <stdio.h> 
+int max(int a, int b) 
+{ 
+  int result; 
+  if(a<b) result=b; 
+  else result=a; 
+ 
+  return result; 
+} 
+ 
+int main(void) 
+{ 
+  printf("%d\n", max(2,3)); 
+ 
+  return 0; 
+} 
+the compiled assembly code looks like this:
+
+        .file   "max.c" 
+        .text 
+        .p2align 4,,15 
+        .globl  max 
+        .type   max, @function 
+
